@@ -1,0 +1,300 @@
+/* Larger Screen Styles - 768px and up */
+@media screen and (min-width: 768px) {
+    
+    /* Header adjustments for larger screens */
+    header {
+        padding: 1rem 2rem;
+    }
+    
+    .site-name {
+        font-size: 1.5rem;
+    }
+    
+    /* Hide hamburger on larger screens */
+    .hamburger {
+        display: none;
+    }
+    
+    /* Navigation - horizontal layout */
+    nav {
+        background: #1e40af;
+        padding: 0 2rem;
+    }
+    
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 60px;
+    }
+    
+    nav li {
+        border-bottom: none;
+        position: relative;
+    }
+    
+    nav a {
+        padding: 1rem 1.5rem;
+        border-radius: 6px;
+        margin: 0 0.25rem;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    nav a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+    
+    nav a:hover::before {
+        left: 100%;
+    }
+    
+    nav a:hover,
+    nav a.active {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-1px);
+    }
+    
+    /* Main content adjustments */
+    main {
+        padding: 2rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    section {
+        padding: 2.5rem;
+    }
+    
+    /* Profile section - side by side layout */
+    .profile-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+    .profile-image {
+        flex-shrink: 0;
+        width: 250px;
+        height: 250px;
+    }
+    
+    .profile-text {
+        flex: 1;
+    }
+    
+    .profile-text p {
+        font-size: 1.125rem;
+        line-height: 1.8;
+    }
+    
+    /* Filter buttons - horizontal layout */
+    .filter-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .filter-btn {
+        min-width: 140px;
+    }
+    
+    /* Courses grid - 2 columns */
+    .courses-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    /* Location section improvements */
+    .location-info {
+        text-align: center;
+    }
+    
+    /* Footer improvements */
+    footer {
+        padding: 3rem 2rem;
+    }
+    
+    .social-links {
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .social-links a {
+        padding: 1rem;
+    }
+    
+    footer p {
+        font-size: 1.1rem;
+        margin: 0.75rem 0;
+    }
+}
+
+/* Large Desktop Styles - 1024px and up */
+@media screen and (min-width: 1024px) {
+    
+    /* Header full width improvements */
+    header {
+        padding: 1.5rem 3rem;
+    }
+    
+    .site-name {
+        font-size: 1.75rem;
+    }
+    
+    nav {
+        padding: 0 3rem;
+    }
+    
+    /* Main content wider spacing */
+    main {
+        padding: 3rem;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+    
+    section {
+        padding: 3rem;
+        margin-bottom: 4rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Profile section enhanced */
+    .profile-content {
+        gap: 4rem;
+    }
+    
+    .profile-image {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .profile-text p {
+        font-size: 1.2rem;
+        line-height: 1.9;
+    }
+    
+    /* Courses grid - 3 columns on large screens */
+    .courses-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .course-card {
+        padding: 2rem;
+    }
+    
+    .course-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    /* Enhanced hover effects */
+    .course-card:hover {
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        transform: translateY(-4px);
+    }
+    
+    /* Location section as grid */
+    .location-weather {
+        display: grid;
+        place-items: center;
+    }
+    
+    .location-info {
+        max-width: 600px;
+    }
+    
+    .weather-info {
+        padding: 1.5rem;
+        font-size: 1.125rem;
+    }
+}
+
+/* Extra Large Screens - 1200px and up */
+@media screen and (min-width: 1200px) {
+    
+    /* Maximum width container */
+    main {
+        max-width: 1400px;
+    }
+    
+    /* Four column course layout for very large screens */
+    .courses-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Enhanced section spacing */
+    section {
+        margin-bottom: 5rem;
+    }
+    
+    /* Profile section with more breathing room */
+    .profile-content {
+        gap: 5rem;
+        padding: 2rem 0;
+    }
+    
+    /* Typography enhancements */
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .profile-text p {
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header,
+    nav,
+    .hamburger,
+    .social-links,
+    .filter-buttons {
+        display: none;
+    }
+    
+    main {
+        max-width: none;
+        padding: 0;
+    }
+    
+    section {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+    
+    .course-card {
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
