@@ -1,0 +1,357 @@
+/* Larger Screen Styles for Chamber Directory */
+
+/* Tablet Styles - 768px and up */
+@media screen and (min-width: 768px) {
+    
+    /* Header improvements */
+    .header-container {
+        padding: 1.5rem 2rem;
+    }
+    
+    .chamber-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .chamber-title h1 {
+        font-size: 2rem;
+    }
+    
+    .chamber-title p {
+        font-size: 1rem;
+    }
+    
+    /* Hide hamburger on larger screens */
+    .hamburger {
+        display: none;
+    }
+    
+    /* Horizontal navigation */
+    .main-nav .nav-list {
+        display: flex !important;
+        flex-direction: row;
+        padding: 0 2rem;
+        height: 60px;
+        align-items: center;
+    }
+    
+    .main-nav li {
+        border-bottom: none;
+    }
+    
+    .main-nav a {
+        padding: 1rem 1.5rem;
+        border-radius: 6px;
+        margin: 0 0.25rem;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .main-nav a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+    
+    .main-nav a:hover::before {
+        left: 100%;
+    }
+    
+    .main-nav a:hover,
+    .main-nav a.active {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-1px);
+    }
+    
+    /* Directory controls side by side */
+    .directory-controls {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .view-toggles {
+        flex: 0 0 auto;
+    }
+    
+    .view-btn {
+        flex: 0 0 auto;
+        min-width: 120px;
+    }
+    
+    .filter-controls {
+        flex: 0 0 200px;
+    }
+    
+    /* Members grid - 2 columns */
+    .members-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    /* List view adjustments */
+    .members-container.list-view .member-card {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .members-container.list-view .member-header {
+        flex: 0 0 300px;
+        margin-bottom: 0;
+    }
+    
+    .members-container.list-view .member-details {
+        flex: 1;
+    }
+    
+    /* Legend horizontal layout */
+    .legend-items {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+    
+    .legend-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    /* Footer grid layout */
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 3rem;
+        padding: 4rem 2rem 3rem;
+    }
+    
+    .footer-bottom {
+        padding: 2rem;
+    }
+}
+
+/* Desktop Styles - 1024px and up */
+@media screen and (min-width: 1024px) {
+    
+    /* Enhanced header */
+    .header-container {
+        padding: 2rem 3rem;
+    }
+    
+    .chamber-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .chamber-title h1 {
+        font-size: 2.5rem;
+    }
+    
+    .chamber-title p {
+        font-size: 1.125rem;
+    }
+    
+    /* Navigation improvements */
+    .main-nav .nav-list {
+        padding: 0 3rem;
+    }
+    
+    /* Main content spacing */
+    .directory-main {
+        padding: 3rem 2rem;
+    }
+    
+    .directory-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .directory-hero p {
+        font-size: 1.3rem;
+    }
+    
+    /* Members grid - 3 columns */
+    .members-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    /* Enhanced member cards */
+    .member-card {
+        padding: 2rem;
+    }
+    
+    .member-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .member-info h3 {
+        font-size: 1.375rem;
+    }
+    
+    /* List view enhanced */
+    .members-container.list-view .member-header {
+        flex: 0 0 400px;
+    }
+    
+    .members-container.list-view .member-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    /* Enhanced hover effects */
+    .member-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Legend improvements */
+    .legend-items {
+        gap: 4rem;
+    }
+    
+    .legend-item {
+        max-width: 200px;
+    }
+    
+    /* Footer enhancements */
+    .footer-content {
+        padding: 5rem 3rem 4rem;
+    }
+}
+
+/* Large Desktop Styles - 1200px and up */
+@media screen and (min-width: 1200px) {
+    
+    /* Members grid - 4 columns for very large screens */
+    .members-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Directory hero enhanced */
+    .directory-hero {
+        padding: 3rem 0;
+    }
+    
+    .directory-hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    /* Enhanced spacing */
+    .directory-main {
+        padding: 4rem 3rem;
+    }
+    
+    .directory-controls {
+        padding: 2rem;
+    }
+    
+    /* Member card enhancements */
+    .member-card {
+        padding: 2.5rem;
+    }
+    
+    .member-header {
+        gap: 1.5rem;
+    }
+    
+    .member-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* List view for large screens */
+    .members-container.list-view .member-header {
+        flex: 0 0 500px;
+    }
+    
+    /* Footer maximum width */
+    .footer-content {
+        grid-template-columns: 3fr 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+/* Extra Large Screens - 1400px and up */
+@media screen and (min-width: 1400px) {
+    
+    /* Container max-width adjustments */
+    .header-container,
+    .directory-main,
+    .footer-content {
+        max-width: 1400px;
+    }
+    
+    /* Ultra-wide member grid */
+    .members-container {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3rem;
+    }
+    
+    /* Enhanced typography */
+    .directory-hero h1 {
+        font-size: 4rem;
+    }
+    
+    .directory-hero p {
+        font-size: 1.4rem;
+        max-width: 800px;
+    }
+}
+
+/* High-resolution displays */
+@media screen and (min-resolution: 2dppx) {
+    .chamber-logo,
+    .member-logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header,
+    .main-nav,
+    .hamburger,
+    .directory-controls,
+    .social-links,
+    .membership-legend {
+        display: none;
+    }
+    
+    .directory-main {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .members-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .member-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+    
+    .member-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .directory-hero h1 {
+        font-size: 2rem;
+        color: black;
+    }
+}
