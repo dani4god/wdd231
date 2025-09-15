@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Directory of local business members of the [Your City] Chamber of Commerce. Find trusted businesses and services in our community.">
-    <meta name="author" content="Your Name">
-    <title>Anambra Chamber of Commerce - Member Directory</title>
+    <meta name="author" content="Okeke Daniel">
+    <title>Member Directory - Anambra State Chamber of Commerce</title>
     
     <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Anambra Chamber of Commerce - Member Directory">
+    <meta property="og:title" content="[Your City] Chamber of Commerce - Member Directory">
     <meta property="og:description" content="Discover local businesses and services in our community. Browse our member directory to find trusted partners.">
-    <meta property="og:image" content="https://dani4god.github.io/wdd231/chamber/images/chamber-social.jpg">
-    <meta property="og:url" content="https://dani4god.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://yourusername.github.io/wdd231/chamber/images/chamber-social.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -34,7 +38,7 @@
     <header>
         <div class="header-container">
             <div class="logo-section">
-                <img src="images/chamber-logo.png" alt="Chamber of Commerce Logo" class="chamber-logo">
+                <img src="images/chamber-logo.png" alt="[Your City] Chamber of Commerce Logo" class="chamber-logo">
                 <div class="chamber-title">
                     <h1>Anambra</h1>
                     <p>Chamber of Commerce</p>
@@ -61,8 +65,9 @@
     </nav>
 
     <main class="directory-main">
+        <h1>Member Directory</h1>
+        
         <div class="directory-hero">
-            <h1>Member Directory</h1>
             <p>Discover the businesses that make our community thrive</p>
         </div>
 
@@ -83,6 +88,7 @@
             </div>
             
             <div class="filter-controls">
+                <label for="membership-filter">Filter by Membership Level:</label>
                 <select id="membership-filter" aria-label="Filter by membership level">
                     <option value="all">All Members</option>
                     <option value="3">Gold Members</option>
@@ -122,11 +128,11 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section contact-info">
-                <h3>Anambra Chamber of Commerce</h3>
+                <h3>[Your City] Chamber of Commerce</h3>
                 <div class="contact-details">
-                    <p>📍 Njikoka Street<br>
-                    Enugwu-ukwu, Anambra State </p>
-                    <p>📞 (234) 906-397</p>
+                    <p>📍 123 Main Street<br>
+                    Awka, Anambra State 12345</p>
+                    <p>📞 (555) 123-4567</p>
                     <p>✉️ info@yourcitychamber.com</p>
                 </div>
                 <div class="social-links">
@@ -146,7 +152,7 @@
             <div class="footer-section quick-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join Us</a></li>
                     <li><a href="discover.html">Discover</a></li>
