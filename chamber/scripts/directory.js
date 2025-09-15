@@ -82,14 +82,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create member card HTML
     function createMemberCard(member) {
         const membershipInfo = getMembershipInfo(member.membershipLevel);
+        const companyInitials = member.name.split(' ').map(word => word[0]).join('').substring(0, 2);
         
         return `
             <div class="member-card ${membershipInfo.class}">
                 <div class="member-header">
                     <img src="${member.image}" alt="${member.name} logo" class="member-logo" 
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-                         onload="this.style.display='block';">
-                    <div style="display:none; width:80px; height:80px; background:#f3f4f6; border-radius:8px; flex-shrink:0;"></div>
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                         onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                    <div class="member-logo placeholder" style="display:none;">${companyInitials}</div>
                     <div class="member-info">
                         <h3>${member.name}</h3>
                         <span class="membership-badge badge ${membershipInfo.class}">
@@ -154,8 +155,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateViewClass() {
         if (!membersContainer) return;
         
+        // Remove both classes first
         membersContainer.classList.remove('list-view', 'grid-view');
+        
+        // Add the current view class
         membersContainer.classList.add(`${currentView}-view`);
+        
+        console.log('View updated to:', currentView); // Debug log
     }
     
     // Filter members by membership level
@@ -174,6 +180,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleView(newView) {
         if (newView === currentView) return;
         
+        console.log('Toggling from', currentView, 'to', newView); // Debug log
+        
         currentView = newView;
         
         // Update button states
@@ -187,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Save preference to localStorage (if available)
         try {
-            localStorage.setItem('directory-view', newView);
+            localStorage.setItem('chamber-directory-view', newView);
         } catch (e) {
             // localStorage not available, continue without saving
         }
@@ -196,12 +204,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load saved view preference
     function loadViewPreference() {
         try {
-            const savedView = localStorage.getItem('directory-view');
+            const savedView = localStorage.getItem('chamber-directory-view');
             if (savedView && (savedView === 'grid' || savedView === 'list')) {
+                currentView = savedView;
                 toggleView(savedView);
+            } else {
+                // Set default to grid view
+                currentView = 'grid';
+                toggleView('grid');
             }
         } catch (e) {
             // localStorage not available, use default
+            currentView = 'grid';
+            toggleView('grid');
         }
     }
     
@@ -209,11 +224,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // View toggle buttons
     if (gridViewBtn) {
-        gridViewBtn.addEventListener('click', () => toggleView('grid'));
+        gridViewBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('Grid button clicked'); // Debug log
+            toggleView('grid');
+        });
+    } else {
+        console.log('Grid view button not found!'); // Debug log
     }
     
     if (listViewBtn) {
-        listViewBtn.addEventListener('click', () => toggleView('list'));
+        listViewBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('List button clicked'); // Debug log
+            toggleView('list');
+        });
+    } else {
+        console.log('List view button not found!'); // Debug log
     }
     
     // Membership filter
@@ -245,7 +272,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize the page
     function init() {
+        console.log('Initializing directory page...'); // Debug log
+        
+        // Load view preference first
         loadViewPreference();
+        
+        // Then fetch and display members
         fetchMembers();
     }
     

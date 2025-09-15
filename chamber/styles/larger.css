@@ -97,7 +97,7 @@
     /* List view adjustments */
     .members-container.list-view .member-card {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 2rem;
         padding: 1.5rem;
     }
@@ -105,10 +105,23 @@
     .members-container.list-view .member-header {
         flex: 0 0 300px;
         margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
     
     .members-container.list-view .member-details {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .members-container.list-view .member-contact {
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 0;
+        border: none;
     }
     
     /* Legend horizontal layout */
