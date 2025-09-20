@@ -233,9 +233,74 @@
         max-width: 200px;
     }
     
-    /* Footer enhancements */
-    .footer-content {
-        padding: 5rem 3rem 4rem;
+    /* Home Page Responsive Styles */
+    
+    /* Hero Section - Larger Screens */
+    .hero-section {
+        height: 600px;
+    }
+    
+    .hero-content {
+        padding: 3rem;
+        max-width: 900px;
+    }
+    
+    .hero-text h1 {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .cta-button {
+        padding: 1.25rem 3rem;
+        font-size: 1.2rem;
+    }
+    
+    /* Events Container */
+    .events-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .event-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .event-date {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1rem;
+    }
+    
+    /* Weather Section */
+    .weather-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        text-align: left;
+    }
+    
+    .current-weather {
+        margin-bottom: 0;
+    }
+    
+    .forecast {
+        border-top: none;
+        border-left: 1px solid #e5e7eb;
+        padding-top: 0;
+        padding-left: 2rem;
+    }
+    
+    /* Spotlights Container */
+    .spotlights-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 }
 

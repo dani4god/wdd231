@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Directory of local business members of the [Your City] Chamber of Commerce. Find trusted businesses and services in our community.">
-    <meta name="author" content="Okeke Daniel">
-    <title>Member Directory - Anambra State Chamber of Commerce</title>
+    <meta name="description" content="Welcome to [Your City] Chamber of Commerce - Supporting local business growth and community development through networking, advocacy, and resources.">
+    <meta name="author" content="Your Name">
+    <title>Anambra Chamber of Commerce - Home</title>
     
     <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="[Your City] Chamber of Commerce - Member Directory">
-    <meta property="og:description" content="Discover local businesses and services in our community. Browse our member directory to find trusted partners.">
-    <meta property="og:image" content="https://yourusername.github.io/wdd231/chamber/images/chamber-social.jpg">
-    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html">
+    <meta property="og:title" content="Anambra Chamber of Commerce - Home">
+    <meta property="og:description" content="Join our thriving business community. Connect, grow, and succeed with [Your City] Chamber of Commerce.">
+    <meta property="og:image" content="https://dani4god.github.io/wdd231/chamber/images/chamber-social.jpg">
+    <meta property="og:url" content="https://dani4god.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
     
     <!-- Favicon -->
@@ -31,14 +31,15 @@
     
     <!-- JavaScript Files -->
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
     <script src="scripts/footer.js" defer></script>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo-section">
-                <img src="images/chamber-logo.png" alt="[Your City] Chamber of Commerce Logo" class="chamber-logo">
+                <img src="images/chamber-logo.png" alt="Anambra Chamber of Commerce Logo" class="chamber-logo">
                 <div class="chamber-title">
                     <h1>Anambra</h1>
                     <p>Chamber of Commerce</p>
@@ -57,81 +58,91 @@
 
     <nav id="navigation" class="main-nav">
         <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
             <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
-    <main class="directory-main">
-        <h1>Member Directory</h1>
-        
-        <div class="directory-hero">
-            <p>Discover the businesses that make our community thrive</p>
-        </div>
-
-        <div class="directory-controls">
-            <div class="view-toggles">
-                <button id="grid-view" class="view-btn active" aria-label="Grid view">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
-                    </svg>
-                    Grid
-                </button>
-                <button id="list-view" class="view-btn" aria-label="List view">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
-                    </svg>
-                    List
-                </button>
-            </div>
-            
-            <div class="filter-controls">
-                <label for="membership-filter">Filter by Membership Level:</label>
-                <select id="membership-filter" aria-label="Filter by membership level">
-                    <option value="all">All Members</option>
-                    <option value="3">Gold Members</option>
-                    <option value="2">Silver Members</option>
-                    <option value="1">General Members</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="loading" id="loading">
-            <p>Loading members...</p>
-        </div>
-
-        <div class="members-container" id="members-container">
-            <!-- Member cards will be populated by JavaScript -->
-        </div>
-
-        <div class="membership-legend">
-            <h3>Membership Levels</h3>
-            <div class="legend-items">
-                <div class="legend-item">
-                    <span class="badge gold">Gold</span>
-                    <p>Premier membership with maximum benefits and visibility</p>
-                </div>
-                <div class="legend-item">
-                    <span class="badge silver">Silver</span>
-                    <p>Enhanced membership with additional promotional opportunities</p>
-                </div>
-                <div class="legend-item">
-                    <span class="badge member">Member</span>
-                    <p>Standard membership with core chamber benefits</p>
+    <main class="home-main">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Welcome to Anambra Chamber of Commerce</h1>
+                    <p>Empowering local businesses to thrive through connection, advocacy, and growth opportunities in our vibrant community.</p>
+                    <a href="join.html" class="cta-button">Join Our Chamber</a>
                 </div>
             </div>
-        </div>
+            <div class="hero-image">
+                <img src="images/members/hero-business.jpg" alt="Local businesses in [Your City]" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="events-section">
+            <h2>Upcoming Events</h2>
+            <div class="events-container">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">DEC</span>
+                        <span class="day">15</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Business Networking Breakfast</h3>
+                        <p><strong>Time:</strong> 7:30 AM - 9:00 AM</p>
+                        <p><strong>Location:</strong> Grand Hotel Conference Center</p>
+                        <p>Join fellow business leaders for networking and breakfast. Guest speaker will discuss "Digital Marketing Trends for 2024".</p>
+                        <a href="#" class="event-link">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="month">DEC</span>
+                        <span class="day">22</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Holiday Business Mixer</h3>
+                        <p><strong>Time:</strong> 5:30 PM - 8:00 PM</p>
+                        <p><strong>Location:</strong> Chamber Office</p>
+                        <p>Celebrate the holiday season with fellow chamber members. Light refreshments and door prizes provided.</p>
+                        <a href="#" class="event-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather-section">
+            <h2>Local Weather</h2>
+            <div class="weather-container">
+                <div class="current-weather" id="current-weather">
+                    <div class="weather-loading">Loading weather data...</div>
+                </div>
+                <div class="forecast" id="forecast">
+                    <!-- Forecast will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Spotlights Section -->
+        <section class="spotlights-section">
+            <h2>Member Spotlights</h2>
+            <div class="spotlights-container" id="spotlights-container">
+                <div class="spotlights-loading">Loading member spotlights...</div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section contact-info">
-                <h3>[Your City] Chamber of Commerce</h3>
+                <h3>Anambra Chamber of Commerce</h3>
                 <div class="contact-details">
                     <p>📍 123 Main Street<br>
-                    Awka, Anambra State 12345</p>
+                    Anambra, Awka 4237</p>
                     <p>📞 (555) 123-4567</p>
                     <p>✉️ info@yourcitychamber.com</p>
                 </div>
@@ -152,7 +163,7 @@
             <div class="footer-section quick-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join Us</a></li>
                     <li><a href="discover.html">Discover</a></li>
