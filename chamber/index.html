@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to [Your City] Chamber of Commerce - Supporting local business growth and community development through networking, advocacy, and resources.">
-    <meta name="author" content="Your Name">
+    <meta name="description" content="Welcome to Anambra Chamber of Commerce - Supporting local business growth and community development through networking, advocacy, and resources.">
+    <meta name="author" content="Okeke Daniel">
     <title>Anambra Chamber of Commerce - Home</title>
     
     <!-- Facebook Open Graph Meta Tags -->
@@ -14,15 +15,24 @@
     <meta property="og:url" content="https://dani4god.github.io/wdd231/chamber/index.html">
     <meta property="og:type" content="website">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Favicon - Multiple formats for better browser support -->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
     
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Preconnect to OpenWeatherMap API -->
+    <link rel="preconnect" href="https://api.openweathermap.org">
+    <link rel="preconnect" href="https://openweathermap.org">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="images/members/hero-business.jpg" as="image" type="image/webp">
+    <link rel="preload" href="styles/base.css" as="style">
+    
+    <!-- Google Fonts with optimized loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -39,7 +49,10 @@
     <header>
         <div class="header-container">
             <div class="logo-section">
-                <img src="images/chamber-logo.png" alt="Anambra Chamber of Commerce Logo" class="chamber-logo">
+                <img src="images/chamber-logo.png" alt="Anambra Chamber of Commerce Logo" 
+                     class="chamber-logo" 
+                     width="80" height="80"
+                     loading="eager">
                 <div class="chamber-title">
                     <h1>Anambra</h1>
                     <p>Chamber of Commerce</p>
@@ -76,7 +89,11 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/members/hero-business.jpg" alt="Local businesses in [Your City]" loading="lazy">
+                <img src="images/members/hero-business.jpg" alt="Local businesses in Anambra" 
+                     loading="eager" 
+                     fetchpriority="high"
+                     width="1200" height="600"
+                     sizes="(max-width: 768px) 100vw, 1200px">
             </div>
         </section>
 
@@ -142,7 +159,7 @@
                 <h3>Anambra Chamber of Commerce</h3>
                 <div class="contact-details">
                     <p>📍 123 Main Street<br>
-                    Anambra, Awka 4237</p>
+                    Awka, Anambra 12345</p>
                     <p>📞 (555) 123-4567</p>
                     <p>✉️ info@yourcitychamber.com</p>
                 </div>
@@ -179,7 +196,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; <span id="currentyear"></span> Anambra Chamber of Commerce</p>
+            <p>&copy; <span id="currentyear"></span>  Chamber of Commerce</p>
             <p>Okeke Daniel | WDD 231 | <span id="lastModified"></span></p>
         </div>
     </footer>

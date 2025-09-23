@@ -607,7 +607,42 @@ select:focus {
     padding: 0 1rem 2rem;
 }
 
-/* Hero Section - Full Background Image with Overlay Text */
+/* Performance Optimizations */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    will-change: transform;
+}
+
+/* Optimize animations for performance */
+.hero-section,
+.event-card,
+.spotlight-card,
+.cta-button {
+    will-change: auto;
+}
+
+/* Reduce paint on hover effects */
+.event-card:hover,
+.spotlight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    will-change: transform;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    will-change: transform;
+}
+
+/* Optimize font loading */
+body {
+    font-display: swap;
+}
+
+/* Critical CSS for above-the-fold content */
 .hero-section {
     position: relative;
     height: 500px;
@@ -618,6 +653,7 @@ select:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    contain: layout style paint;
 }
 
 .hero-image {

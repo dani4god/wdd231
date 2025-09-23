@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return `
             <div class="spotlight-card ${membershipInfo.class}">
                 <img src="${member.image}" alt="${member.name} logo" class="spotlight-logo" 
+                     loading="lazy"
+                     width="100" height="100"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                      onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
                 <div class="spotlight-logo placeholder" style="display:none; width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg, #f3f4f6, #e5e7eb); color:#6b7280; font-weight:600; font-size:1.5rem; margin:0 auto 1rem; border:3px solid #f1f5f9; align-items:center; justify-content:center;">${companyInitials}</div>
