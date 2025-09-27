@@ -637,10 +637,6 @@ select:focus {
     will-change: transform;
 }
 
-/* Optimize font loading */
-body {
-    font-display: swap;
-}
 
 /* Critical CSS for above-the-fold content */
 .hero-section {
