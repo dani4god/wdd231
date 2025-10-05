@@ -1,0 +1,68 @@
+{
+  "attractions": [
+    {
+      "id": 1,
+      "name": "Historic City Hall",
+      "image": "images/attractions/cityhall.webp",
+      "address": "100 Main Street, Your City, ST 12345",
+      "description": "Built in 1895, our beautiful City Hall stands as a testament to Victorian architecture. The building features stunning stained glass windows and hosts regular tours showcasing the city's rich governmental history.",
+      "category": "Historic"
+    },
+    {
+      "id": 2,
+      "name": "Riverside Park",
+      "image": "images/attractions/riversidepark.webp",
+      "address": "456 River Road, Your City, ST 12345",
+      "description": "A 50-acre urban oasis featuring walking trails, playgrounds, picnic areas, and stunning river views. Perfect for families, joggers, and nature enthusiasts year-round.",
+      "category": "Recreation"
+    },
+    {
+      "id": 3,
+      "name": "Community Arts Center",
+      "image": "images/attractions/artscenter.webp",
+      "address": "789 Cultural Avenue, Your City, ST 12345",
+      "description": "Experience local and international art exhibitions, live performances, and creative workshops. The center hosts monthly First Friday events featuring local artists and musicians.",
+      "category": "Culture"
+    },
+    {
+      "id": 4,
+      "name": "Farmers Market Plaza",
+      "image": "images/attractions/farmersmarket.webp",
+      "address": "321 Market Street, Your City, ST 12345",
+      "description": "Every Saturday from May to October, local farmers and artisans gather to offer fresh produce, handcrafted goods, and delicious prepared foods. A true community gathering place.",
+      "category": "Shopping"
+    },
+    {
+      "id": 5,
+      "name": "Heritage Museum",
+      "image": "images/attractions/heritagemuseum.webp",
+      "address": "555 History Lane, Your City, ST 12345",
+      "description": "Discover our region's fascinating past through interactive exhibits, historical artifacts, and engaging storytelling. Special exhibits change quarterly, ensuring something new with every visit.",
+      "category": "Education"
+    },
+    {
+      "id": 6,
+      "name": "Downtown Theater",
+      "image": "images/attractions/downtowntheater.webp",
+      "address": "234 Broadway, Your City, ST 12345",
+      "description": "A beautifully restored 1920s theater offering live performances, classic films, and community events. The theater's art deco interior provides an elegant backdrop for entertainment.",
+      "category": "Entertainment"
+    },
+    {
+      "id": 7,
+      "name": "Lakeside Trail",
+      "image": "images/attractions/lakesidetrail.webp",
+      "address": "678 Lakeview Drive, Your City, ST 12345",
+      "description": "This scenic 5-mile paved trail circles the lake, offering breathtaking views and wildlife watching opportunities. Popular with cyclists, walkers, and runners of all fitness levels.",
+      "category": "Recreation"
+    },
+    {
+      "id": 8,
+      "name": "Innovation Technology Hub",
+      "image": "images/attractions/techhub.webp",
+      "address": "890 Innovation Boulevard, Your City, ST 12345",
+      "description": "A state-of-the-art facility supporting local startups and entrepreneurs. Features coworking spaces, meeting rooms, and hosts regular networking events and tech workshops.",
+      "category": "Business"
+    }
+  ]
+}
