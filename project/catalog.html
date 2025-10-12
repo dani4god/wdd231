@@ -9,14 +9,14 @@
     <meta property="og:description" content="Explore thousands of books in our digital collection">
     <meta property="og:type" content="website">
     <title>Catalog - Digital Horizon E-Library</title>
-    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="images/logo.jpg" alt="Digital Horizon E-Library Logo" width="50" height="50">
+                <img src="images/logo.png" alt="Digital Horizon E-Library Logo" width="50" height="50">
                 <span class="logo-text">Digital Horizon</span>
             </div>
             <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -41,6 +41,7 @@
         </section>
 
         <section class="filters">
+            <h2 class="visually-hidden">Filter Books</h2>
             <div class="filter-container">
                 <div class="filter-group">
                     <label for="genreFilter">Filter by Genre:</label>
@@ -75,6 +76,7 @@
         </section>
 
         <section class="catalog-results">
+            <h2 class="visually-hidden">Book Results</h2>
             <div class="results-header">
                 <p id="resultsCount">Loading books...</p>
             </div>
@@ -111,7 +113,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Digital Horizon E-Library. All rights reserved.</p>
-            <p><a href="https://youtu.be/S_wSLqFn5Tg" target="_blank" rel="noopener">Video Demonstration</a></p>
+            <p><a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank" rel="noopener">Video Demonstration</a></p>
         </div>
     </footer>
 
@@ -119,6 +121,7 @@
     <div id="bookModal" class="modal" role="dialog" aria-labelledby="bookModalTitle" aria-modal="true">
         <div class="modal-content book-modal">
             <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 id="bookModalTitle" class="visually-hidden">Book Details</h2>
             <div id="bookDetails">
                 <!-- Book details will be inserted here -->
             </div>
