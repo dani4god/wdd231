@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Digital Horizon E-Library today. Choose from Basic, Premium, or Family membership plans with exclusive benefits">
+    <meta name="author" content="Okeke Daniel">
+    <meta property="og:title" content="Membership - Digital Horizon E-Library">
+    <meta property="og:description" content="Become a member and unlock unlimited access to our digital library">
+    <meta property="og:type" content="website">
+    <title>Membership - Digital Horizon E-Library</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Digital Horizon E-Library Logo" width="50" height="50">
+                <span class="logo-text">Digital Horizon</span>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="membership.html" class="active" aria-current="page">Membership</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Membership Plans</h1>
+            <p>Choose the perfect plan for your reading needs</p>
+        </section>
+
+        <section class="membership-plans">
+            <div class="plan-card">
+                <h2>Basic</h2>
+                <p class="price">Free</p>
+                <ul class="plan-features">
+                    <li>Access to 1,000+ books</li>
+                    <li>2 books per month</li>
+                    <li>Standard support</li>
+                    <li>Mobile app access</li>
+                </ul>
+                <button class="plan-button" data-plan="Basic">Get Started</button>
+            </div>
+
+            <div class="plan-card featured">
+                <div class="badge">Most Popular</div>
+                <h2>Premium</h2>
+                <p class="price">$9.99<span>/month</span></p>
+                <ul class="plan-features">
+                    <li>Access to 10,000+ books</li>
+                    <li>Unlimited borrowing</li>
+                    <li>Priority support</li>
+                    <li>Audiobook access</li>
+                    <li>Early access to new releases</li>
+                    <li>Offline reading</li>
+                </ul>
+                <button class="plan-button" data-plan="Premium">Subscribe Now</button>
+            </div>
+
+            <div class="plan-card">
+                <h2>Family</h2>
+                <p class="price">$14.99<span>/month</span></p>
+                <ul class="plan-features">
+                    <li>All Premium features</li>
+                    <li>Up to 5 family members</li>
+                    <li>Parental controls</li>
+                    <li>Kids section access</li>
+                    <li>Family reading stats</li>
+                </ul>
+                <button class="plan-button" data-plan="Family">Subscribe Now</button>
+            </div>
+        </section>
+
+        <section class="registration-section">
+            <h2>Register for Membership</h2>
+            <p>Fill out the form below to create your account</p>
+            
+            <form id="membershipForm" action="thankyou.html" method="get">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name: <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name: <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address: <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                </div>
+
+                <div class="form-group">
+                    <label for="membershipPlan">Membership Plan: <span class="required">*</span></label>
+                    <select id="membershipPlan" name="membershipPlan" required>
+                        <option value="">Select a plan</option>
+                        <option value="Basic">Basic (Free)</option>
+                        <option value="Premium">Premium ($9.99/month)</option>
+                        <option value="Family">Family ($14.99/month)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Genres: <span class="required">*</span></label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="genres" value="Fiction"> Fiction</label>
+                        <label><input type="checkbox" name="genres" value="Science Fiction"> Science Fiction</label>
+                        <label><input type="checkbox" name="genres" value="Mystery"> Mystery</label>
+                        <label><input type="checkbox" name="genres" value="Romance"> Romance</label>
+                        <label><input type="checkbox" name="genres" value="Non-Fiction"> Non-Fiction</label>
+                        <label><input type="checkbox" name="genres" value="Biography"> Biography</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Comments or Questions:</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes" id="newsletterCheckbox">
+                        Subscribe to our newsletter
+                    </label>
+                </div>
+
+                <button type="submit" class="cta-button">Complete Registration</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@digitalhorizon-library.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Digital Horizon E-Library. All rights reserved.</p>
+            <p><a href="https://youtu.be/S_wSLqFn5Tg" target="_blank" rel="noopener">Video Demonstration</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts/membership.js" type="module"></script>
+</body>
+</html>
